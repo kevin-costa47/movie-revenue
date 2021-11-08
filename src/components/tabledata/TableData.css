@@ -1,0 +1,60 @@
+.show {
+	display: flex !important;
+	flex-direction: column;
+	gap: 1rem;
+	padding-left: 3.5rem;
+	padding-top: 1.5rem;
+}
+
+.table_layout {
+	display: inline-flex;
+	width: 100%;
+	flex-direction: row;
+	margin: 0.5rem;
+
+	text-align: left;
+	font: normal normal normal 16px/20px Roboto;
+	letter-spacing: 0px;
+	color: #536b7a;
+	opacity: 1;
+}
+
+.table_data {
+	margin-top: -2rem;
+}
+
+.closeDiv {
+	display: inline-flex;
+	flex-direction: column;
+}
+
+.closeDiv span {
+	text-align: left;
+	font: normal normal normal 8px/16px Roboto;
+	letter-spacing: 0.64px;
+	color: #718fa2;
+	opacity: 1;
+}
+
+.titleLine {
+	width: 52px;
+	border: 1px solid #21b3cf;
+	background: #21b3cf;
+}
+
+.table_layout span:nth-child(1) {
+	width: 5.5rem;
+	text-align: center;
+}
+
+.table_layout span:nth-child(2) {
+	width: 45%;
+}
+
+.table_layout span:nth-child(3) {
+	width: 15%;
+}
+
+.table_layout span:nth-child(4) {
+	width: 25%;
+}
