@@ -51,17 +51,19 @@
       "<rootDir>/node_modules"
     ],
     "moduleNameMapper": {
-      "\\.(css|scss)$": "identity-obj-proxy"
+      "\\.(css|scss|svg)$": "identity-obj-proxy"
     },
     "setupFilesAfterEnv": [
       "<rootDir>/src/setupTests.js"
     ]
   },
   "devDependencies": {
+    "babel-jest": "^27.3.1",
     "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.15.2",
     "enzyme-to-json": "^3.4.4",
     "identity-obj-proxy": "^3.0.0",
+    "jest-svg-transformer": "^1.0.0",
     "prettier": "2.4.1"
   }
 }

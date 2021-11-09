@@ -1,6 +1,6 @@
-import React, { useState,useContext, useRef,Fragment  } from "react";
+import React, {useState,useContext, useRef,Fragment} from "react";
 import useInfiniteScroll from "./useInfiniteScroll";
-import { ReactComponent as Eye } from '../../eye.svg';
+import {ReactComponent as Eye} from '../../eye.svg';
 
 import MovieContext from "../../context/movie/MovieContext";
 import Modal from "../modal/Modal";
@@ -28,7 +28,7 @@ const TableData = () => {
     }
   }
 
-  if (movies.length === 0) {
+  if (movies?.length === 0) {
     return null;
   }
 
@@ -48,7 +48,7 @@ const TableData = () => {
   
   return (
     <Fragment>
-    {movies.map((movie, index) => {
+    {movies?.map((movie, index) => {
     return (
      <div className="card" key={index}>
       <div className="table_layout">
@@ -56,7 +56,7 @@ const TableData = () => {
         <span className="">{movie.title}</span>
         <span className="">{movie.year}</span>
         <span className="">{movie.revenue ? "$"+(movie.revenue*(1000000)).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") : "Unknown"}</span>
-        <button onClick={()=>{Movie.getMoviesData(movie.id);showDropdown()}} style={{background: "transparent",border:"none"}}><Eye /></button>
+        <button id="showInfo" onClick={()=>{Movie.getMoviesData(movie.id);showDropdown()}} style={{background: "transparent",border:"none"}}><Eye /></button>
         <Modal className={dropdown} modalType={"infoModal"} modalRef={modalRef}>
             {movieData && <InfoModal movieData={movieData}/>}
         </Modal>

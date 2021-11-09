@@ -38,8 +38,8 @@ const NavBar = () => {
       </div>
       <div className="nav_bar">
         <div className="sort_buttons">
-          <button className={`filterButton`} onClick={()=>{movieContext.getMoviesEver()}}>Top 10 Revenue</button>
-          <button className={`filterButton ${dropdown===''?'':'ative'}`}  onClick={()=>{showDropdown()}}>{selectedYear?  "Top 10 Revenue "+selectedYear:"Top 10 Revenue per Year"}</button>
+          <button id="allButton" className={`filterButton`} onClick={()=>{movieContext.getMoviesEver()}}>Top 10 Revenue</button>
+          <button id="yearButton" className={`filterButton ${dropdown===''?'':'ative'}`}  onClick={()=>{showDropdown()}}>{selectedYear?  "Top 10 Revenue "+selectedYear:"Top 10 Revenue per Year"}</button>
         </div>
         <Modal className={dropdown} modalType={"yearDropdown"}  modalRef={modalRef}>
           <YearModal years={years}/>
